@@ -1,6 +1,6 @@
 import { Route } from 'react-router-dom';
 import DynamicRouter from './DynamicRouter';
-import PrivateRouter from './PrivateRouter';
+// import PrivateRouter from './PrivateRouter';
 
 function CatchAllRoutes({ routeConfig }: { routeConfig: IRoute[] }) {
   const renderRoutes = (routes: IRoute[]) => {
@@ -19,13 +19,14 @@ function CatchAllRoutes({ routeConfig }: { routeConfig: IRoute[] }) {
         <Route
           key={key}
           path={path}
-          element={
-            isPrivate ? (
-              <PrivateRouter component={<DynamicRouter component={Component} />} />
-            ) : (
-              <DynamicRouter component={Component} />
-            )
-          }
+          element={<DynamicRouter component={Component}/>}
+          // element={
+          //   isPrivate ? (
+          //     <PrivateRouter component={<DynamicRouter component={Component} />} />
+          //   ) : (
+          //     <DynamicRouter component={Component} />
+          //   )
+          // }
         />
       );
     });
