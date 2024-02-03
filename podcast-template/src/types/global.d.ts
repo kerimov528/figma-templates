@@ -1,4 +1,4 @@
-import { LazyExoticComponent } from "react";
+import { ButtonHTMLAttributes, LazyExoticComponent } from "react";
 
 declare global {
     type IRoute = {
